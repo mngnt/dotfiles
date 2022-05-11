@@ -174,19 +174,9 @@
     5,
     117
   ],
-  "DefaultInputMode": 1,
+  "DefaultInputMode": 3,
   "InputModeMapping": {
-    "Alacritty:Alacritty": 7,
-    "Navigator:firefox": 4,
-    "code-oss:code-oss": 3,
-    "code:Code": 3,
-    "gimp-2.10:Gimp-2.10": 7,
-    "google-chrome:Google-chrome": 3,
-    "ibus-ui-emojier-plasma:plasma.emojier": 7,
-    "plasmashell:plasmashell": 7,
-    "subl:Subl": 3,
-    "system-config-printer:System-config-printer.py": 7,
-    "systemsettings:systemsettings": 7,
-    "wireshark:Wireshark": 7
+    "Navigator:firefox": 3,
+    "subl:Subl": 3
   }
 }

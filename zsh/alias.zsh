@@ -20,9 +20,11 @@ alias gp="git push"
 alias gcl="git clone"
 
 # Alias systemctl
-alias ste="systemctl enable"
-alias stt="systemctl status"
-alias std="systemctl disable"
+alias st-start="sudo systemctl start"
+alias st-restart="sudo systemctl restart"
+alias st-status="sudo systemctl status"
+alias st-enable="sudo systemctl enable"
+alias st-disable="sudo systemctl disable"
 
 
 # Alias vim

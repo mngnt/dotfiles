@@ -20,3 +20,11 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+SPACESHIP_USER_SHOW=always
+
+
+_fix_cursor() {
+   echo -ne '\e[5 q'
+}
+
+precmd_functions+=(_fix_cursor)

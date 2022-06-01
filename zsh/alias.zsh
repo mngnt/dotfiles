@@ -2,13 +2,12 @@ alias reload="source ~/.zshrc"
 
 # Quick Edit
 alias ea='nvim ~/.oh-my-zsh/custom/alias.zsh'
-alias ez='nvim ~/.zshrc'
-alias et='nvim ~/.config/tmux/.tmux.conf'
 alias eacl='nvim ~/.config/alacritty/alacritty.yml'
-alias c="clear"
-alias l="ls -lah"
+alias et='nvim ~/.config/tmux/.tmux.conf'
 alias dow="cd ~/Downloads ; ls"
+alias ez='nvim ~/.zshrc'
 alias ...="cd ../.."
+alias l="ls -lah"
 
 # Alias git
 alias gst="git status"
@@ -21,6 +20,7 @@ alias gcl="git clone"
 
 # Alias systemctl
 alias st-start="sudo systemctl start"
+alias st-stop="sudo systemctl stop"
 alias st-restart="sudo systemctl restart"
 alias st-status="sudo systemctl status"
 alias st-enable="sudo systemctl enable"
@@ -33,14 +33,25 @@ alias evc="nvim ~/.config/nvim/configs/02.configs.vim"
 alias nv="nvim"
 
 # Alias arch
-alias y="yay"
+alias pacin="sudo pacman -S"
+alias yrsc="yay -Rsc"
 alias ys="yay -S"
 alias yr="yay -R"
-alias yrsc="yay -Rsc"
-alias pacin="sudo pacman -S"
-alias upgrade='sudo pacman -Syu ; y '
+alias yc="yay -c"
+alias y="yay"
 
 # Alias firewalld
 alias fw="sudo firewall-cmd"
 alias fwr"sudo firewall-cmd --reload"
 alias fwp"sudo firewall-cmd --permanent"
+
+# Alias iptables
+alias fw-show="sudo iptables -L -n -v" 
+alias fw-show-line="sudo iptables -n -L -v --line-numbers"
+alias fw-start="sudo systemctl start iptables" 
+alias fw-restart="sudo systemctl restart iptables"
+alias fw-stop="sudo systemctl stop iptables"
+alias fw-save="sudo iptables-save -f /etc/iptables/iptables.rules"
+alias fw-restore="sudo iptables-restore /etc/iptables/iptables.rules"
+alias fw-icmp-drop="iptables -A INPUT -p icmp --icmp-type echo-request -j DROP" # Block ICMP Ping Request
+alias fw_flush="iptables -F"

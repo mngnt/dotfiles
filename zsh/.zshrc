@@ -10,7 +10,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
-SPACESHIP_USER_SHOW=always
+#SPACESHIP_USER_SHOW="always"
 SPACESHIP_USER_COLOR="green"
 
 # Plugins

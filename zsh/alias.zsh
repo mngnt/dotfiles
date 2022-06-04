@@ -8,6 +8,7 @@ alias dow="cd ~/Downloads ; ls"
 alias ez='nvim ~/.zshrc'
 alias ...="cd ../.."
 alias l="ls -lah"
+alias lg="lazygit"
 
 # Alias git
 alias gst="git status"
@@ -40,11 +41,6 @@ alias yr="yay -R"
 alias yc="yay -c"
 alias y="yay"
 
-# Alias firewalld
-alias fw="sudo firewall-cmd"
-alias fwr"sudo firewall-cmd --reload"
-alias fwp"sudo firewall-cmd --permanent"
-
 # Alias iptables
 alias fw-show="sudo iptables -L -n -v" 
 alias fw-show-line="sudo iptables -n -L -v --line-numbers"
@@ -54,4 +50,4 @@ alias fw-stop="sudo systemctl stop iptables"
 alias fw-save="sudo iptables-save -f /etc/iptables/iptables.rules"
 alias fw-restore="sudo iptables-restore /etc/iptables/iptables.rules"
 alias fw-icmp-drop="iptables -A INPUT -p icmp --icmp-type echo-request -j DROP" # Block ICMP Ping Request
-alias fw_flush="iptables -F"
+alias fw-flush="iptables -F"

@@ -1,0 +1,9 @@
+configuration {
+    display-drun: "Applications";
+    display-window:"Windows";
+    show-icons:true;
+    modi: "window,drun,ssh,filebrowser";
+    font: "Jetbarins Mono 16";
+    combi-modi: "window,drun,ssh";
+ }
+@theme "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"

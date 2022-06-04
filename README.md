@@ -23,7 +23,6 @@
 ## Tmux
 - Plugins: 
   + Tmux Plugin Manager: [here](https://github.com/tmux-plugins/tpm)
-  + List Plugin: [dracula](https://draculatheme.com/tmux)
   + List Plugin: 
     * [dracula](https://draculatheme.com/tmux)
 

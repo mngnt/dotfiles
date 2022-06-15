@@ -15,6 +15,6 @@ set modifiable
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme onedark
-let g:onedark_terminal_italics=1
+colorscheme OceanicNext
+"let g:onedark_terminal_italics=1
 

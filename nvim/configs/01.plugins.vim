@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/bundle')
 "Theme
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
+Plug 'mhartington/oceanic-next' 
 "airline(bottom taskbar)
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'

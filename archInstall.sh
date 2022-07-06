@@ -5,15 +5,17 @@ get_os () {
   grep -m1 "NAME=" </etc/os-release | cut -d '"' -f 2
 }
 
-
 # Step Setup
-check_deps () {
-  declare -a deps=('git')
-  for dep in ${deps[@]}; do
-    if ! command -v $dep 2>&1 > /dev/null; then
-      error "Dependency $dep is required, you must install it"
-    fi
-  done
+frist () {
+  sudo pacman -Syu --noconfirm
+  sudo pacman -S git --noconfirm
+
+    # Tpm (Plugin for tmux) 
+  git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+  
+  # Vimplug
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   install_yay
 }
 
@@ -31,17 +33,13 @@ install_yay () {
 download_yay () {
     mkdir -p $HOME/repo
     cd $HOME/repo
+    cd yay-bin
     git clone https://aur.archlinux.org/yay-bin.git
     makepkg -si --noconfirm
 }
 
 install_package () {
-    yay -S firefox brave-bin google-chrome xsel nodejs-lts-gallium npm onlyoffice-bin sublime-text-4 noto-fonts-emoji zsh net-tools fcitx5 fcitx5-configtool nmap cronie visual-studio-code-bin flameshot alacritty --noconfirm
-}
-
-enable_system () {
-    sudo systemctl enable cronie.service
-    sudo systemctl start cronie.service
+    yay -S google-chrome firefox onlyoffice-bin tmux sublime-text-4 noto-fonts-emoji net-tools nmap visual-studio-code-bin flameshotxsel alacritty zsh nodejs fakeroot npm cronie pacman-contrib neovim --noconfirm
 }
 
 npm_install () {
@@ -49,17 +47,16 @@ npm_install () {
 }
 
 copy_files () {
-  cp -r alacritty nvim tmux ~/.fcitx5-configtool
+  cp -r alacritty nvim tmux ibus-bamboo ~/.config
   mkdir -p /usr/share/fonts
   cp -r fonts /usr/share/fonts
 }
 
-main () {
-    sudo pacman -Syu --noconfirm
-    check_deps
+run () {
+    frist
     install_package
-    enable_system
     npm_install
+    copy_files
 }
 
-main
+run

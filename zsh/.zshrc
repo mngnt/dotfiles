@@ -10,7 +10,7 @@ export EDITOR=/usr/bin/nvim
 export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="spaceship"
+ZSH_THEME="robbyrussell"
 #SPACESHIP_USER_SHOW="always"
 SPACESHIP_USER_COLOR="green"
 
@@ -19,7 +19,6 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-z
-    tmux
     sudo
     )
 

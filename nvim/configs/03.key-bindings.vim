@@ -16,4 +16,9 @@ let mapleader = " "
 nnoremap <silent><leader>e :q!<cr>
 " Fast save
 nnoremap <silent><leader>s :wa!<cr>
-"
+" Select All
+nmap <C-a> gg<S-v>G 
+
+" Map keys formatter
+nnoremap <silent> <leader>f :Format<CR>
+nnoremap <silent> <leader>F :FormatWrite<CR>

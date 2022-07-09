@@ -8,7 +8,6 @@ alias dow="cd ~/Downloads ; ls"
 alias ez='nvim ~/.zshrc'
 alias ...="cd ../.."
 alias l="ls -lah"
-alias lg="lazygit"
 
 # Alias git
 alias gst="git status"
@@ -37,17 +36,24 @@ alias nv="nvim"
 alias pacin="sudo pacman -S"
 alias yrsc="yay -Rsc"
 alias ys="yay -S"
+alias ySs="yay -Ss"
 alias yr="yay -R"
 alias yc="yay -c"
 alias y="yay"
 
 # Alias iptables
-alias fw-show="sudo iptables -L -n -v" 
-alias fw-show-line="sudo iptables -n -L -v --line-numbers"
-alias fw-start="sudo systemctl start iptables" 
-alias fw-restart="sudo systemctl restart iptables"
-alias fw-stop="sudo systemctl stop iptables"
-alias fw-save="sudo iptables-save -f /etc/iptables/iptables.rules"
-alias fw-restore="sudo iptables-restore /etc/iptables/iptables.rules"
-alias fw-icmp-drop="iptables -A INPUT -p icmp --icmp-type echo-request -j DROP" # Block ICMP Ping Request
-alias fw-flush="iptables -F"
+alias fw="sudo firewall-cmd "
+alias fwr="sudo firewall-cmd --reload"
+alias fw="sudo firewall-cmd --get-default-zone"
+function fwl () {
+  # converts output to zsh array ()
+  # @f flag split on new line
+  zones=("${(@f)$(sudo firewall-cmd --get-active-zones | grep -v 'interfaces\|sources')}")
+
+  for i in $zones; do
+    sudo firewall-cmd --zone $i --list-all
+  done
+
+  echo 'Direct Rules:'
+  sudo firewall-cmd --direct --get-all-rules
+}

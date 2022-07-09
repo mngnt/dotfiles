@@ -112,21 +112,19 @@ local prettier_config = {
 	end,
 }
 
-for _, ft in
-	pairs({
-		"javascript",
-		"javascriptreact",
-		"typescript",
-		"typescriptreact",
-		"svelte",
-		"vue",
-		"html",
-		"css",
-		"markdown",
-		"json",
-		"astro",
-	})
-do
+for _, ft in pairs({
+	"javascript",
+	"javascriptreact",
+	"typescript",
+	"typescriptreact",
+	"svelte",
+	"vue",
+	"html",
+	"css",
+	"markdown",
+	"json",
+	"astro",
+}) do
 	filetype_configs[ft] = prettier_config
 end
 
@@ -135,10 +133,10 @@ require("formatter").setup({
 	filetype = filetype_configs,
 })
 
+-- Format after save
 vim.cmd([[
 augroup AutoFormatting
   autocmd!
   autocmd BufWritePost *.* FormatWrite
 augroup END
 ]])
-

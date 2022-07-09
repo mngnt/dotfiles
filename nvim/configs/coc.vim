@@ -84,10 +84,6 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
 
-" Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
@@ -166,7 +162,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 let g:coc_global_extensions = [
 \ 'coc-json',
 \ 'coc-tsserver',
-\ 'coc-prettier',
 \ 'coc-eslint',
 \ 'coc-html',
 \ 'coc-css',

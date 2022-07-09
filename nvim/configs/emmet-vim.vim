@@ -11,7 +11,7 @@ let g:user_emmet_settings = {
 \              ."<head>\n"
 \              ."\t<meta charset=\"${charset}\">\n"
 \              ."\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
-\              ."\t<title></title>\n"
+\              ."\t<title>Document</title>\n"
 \              ."</head>\n"
 \              ."<body>\n\t${child}|\n</body>\n"
 \              ."</html>",
@@ -21,4 +21,4 @@ let g:user_emmet_settings = {
 
 
 "VIM-EMMET
-let g:user_emmet_leader_key='.'
+let g:user_emmet_leader_key=','

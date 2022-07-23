@@ -1,4 +1,4 @@
-**_My setup linux use daily (support only ArchLinux and based)_**
+**_My setup linux use daily (support ArchLinux and Fedora)_**
 
 # Requirement
 

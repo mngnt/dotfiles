@@ -41,6 +41,7 @@
 
 - **Leader Key:** Space
 - Key Bindings:
-  - `Space + e` : exit file
-  - `Space : s` : save file
+  - `Ctrl + a` : Select all
+  - `Ctrl + q` : Exit file
+  - `Ctrl + s` : Save file
   - `Ctrl + /` : Comment current line:

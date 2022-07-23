@@ -9,16 +9,27 @@
 " cmap, cnoremap, cunmap          Command-line mode
 " omap, onoremap, ounmap          Operator pending mode
 "*****************************************************************************
-
 " Change key leader to Space
 let mapleader = " "
 " EXIT vim
-nnoremap <silent><leader>e :q!<cr>
+nnoremap <silent><C-q> :q!<cr>
 " Fast save
-nnoremap <silent><leader>s :wa!<cr>
+nnoremap <silent><C-s> :wa!<cr>
 " Select All
 nmap <C-a> gg<S-v>G 
 
-" Map keys formatter
-nnoremap <silent> <leader>f :Format<CR>
-nnoremap <silent> <leader>F :FormatWrite<CR>
+" New buffer
+noremap <silent> bN :enew<cr> 
+" Next Buffer
+noremap <silent> bn :bn<cr>
+" previous buffer
+noremap <silent> bp :bp<cr>
+" delete a buffer (close a file)
+noremap <silent> bd :bd<cr>
+
+" Spell checking
+nnoremap <silent> <F11> :set spell!<cr>
+inoremap <silent> <F11> <C-O>:set spell!<cr>
+
+" Run Js
+nmap <silent> <F5> :w !node %<cr>

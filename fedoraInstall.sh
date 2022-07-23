@@ -55,7 +55,7 @@ copy_files () {
 }
 
 remove_package () {
-	sudo dnf remove gnome-boxes-* libreoffice-* gnome-maps-* gnome-tour-* gnome-contacts-* gnome-weather-* mediawriter-* -y
+	sudo dnf remove gnome-text-editor-* rhythmbox-* gnome-boxes-* libreoffice-* gnome-maps-* gnome-tour-* gnome-contacts-* gnome-weather-* mediawriter-* -y
 	sudo dnf autoremove -y
 	sudo dnf clean all
 }

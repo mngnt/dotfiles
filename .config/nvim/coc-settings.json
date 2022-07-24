@@ -1,10 +1,12 @@
 {
   "coc.preferences.extensionUpdateCheck": "daily",
+  "colors.filetypes": ["*"],
   "languageserver": {
     "bash": {
       "command": "bash-language-server",
       "args": ["start"],
       "filetypes": ["sh"]
-    },
-  }
+    }
+  },
+  "markdown-preview-enhanced.liveUpdate": true
 }

@@ -1,4 +1,5 @@
-***My setup linux use daily (support only ArchLinux and based)***
+**_My setup linux use daily (support ArchLinux and Fedora)_**
+
 # Requirement
 
 - [Git](https://github.com/git/git) <br/>
@@ -21,11 +22,20 @@
 - Color: [Oceanic Next](https://github.com/eendroroy/alacritty-theme/blob/master/themes/oceanic_next.yaml)
 
 ## Tmux
+<<<<<<< HEAD
 - Plugins: 
   + Tmux Plugin Manager: [here](https://github.com/tmux-plugins/tpm)
   + List Plugin: [dracula](https://draculatheme.com/tmux)
   + List Plugin: 
     * [dracula](https://draculatheme.com/tmux)
+=======
+
+- Plugins:
+
+  - Tmux Plugin Manager: [here](https://github.com/tmux-plugins/tpm)
+  - List Plugin:
+    - [dracula](https://draculatheme.com/tmux)
+>>>>>>> main
 
 - Key Bindings
   - **Prefix Key:** `Ctrl + f`
@@ -36,9 +46,10 @@
   - `h,j,k,l` switch between pane like **vim**
 
 ## Neovim
+
 - **Leader Key:** Space
 - Key Bindings:
-  - `Space + e` : exit file
-  - `Space : s` : save file
-  - `Ctrl + /`  : Comment current line:
-
+  - `Ctrl + a` : Select all
+  - `Ctrl + q` : Exit file
+  - `Ctrl + s` : Save file
+  - `Ctrl + /` : Comment current line:

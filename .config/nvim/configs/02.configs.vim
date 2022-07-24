@@ -11,10 +11,12 @@ set clipboard=unnamedplus
 set encoding=UTF-8
 set modifiable
 
+" spell languages
+set spelllang=en
+
 "Set theme for nvim
 syntax on
 filetype plugin on
 set termguicolors
-colorscheme onedark
-let g:onedark_terminal_italics=1
+colorscheme monokai_pro
 

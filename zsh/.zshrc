@@ -1,6 +1,7 @@
 # Auto start tmux
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  exec tmux
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX
 fi
 
 tmux source ~/.config/tmux/.tmux.conf
@@ -10,7 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
-#SPACESHIP_USER_SHOW="always"
+SPACESHIP_USER_SHOW="always"
 SPACESHIP_USER_COLOR="green"
 
 # Plugins
@@ -18,7 +19,6 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
     zsh-z
-    tmux
     sudo
     )
 

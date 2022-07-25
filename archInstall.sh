@@ -56,6 +56,7 @@ gnome_setting() {
 
 npm_install() {
   sudo npm i -g bash-language-server
+  sudo npm install -g live-server
 }
 
 clean() {

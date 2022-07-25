@@ -31,5 +31,9 @@ noremap <silent> bd :bd<cr>
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
 
+" Increment/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
 " Run Js
 nmap <silent> <F5> :w !node %<cr>

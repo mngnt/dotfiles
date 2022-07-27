@@ -22,20 +22,19 @@
 - Color: [Oceanic Next](https://github.com/eendroroy/alacritty-theme/blob/master/themes/oceanic_next.yaml)
 
 ## Tmux
-<<<<<<< HEAD
-- Plugins: 
-  + Tmux Plugin Manager: [here](https://github.com/tmux-plugins/tpm)
-  + List Plugin: [dracula](https://draculatheme.com/tmux)
-  + List Plugin: 
-    * [dracula](https://draculatheme.com/tmux)
-=======
+
+- Plugins:
+
+  - Tmux Plugin Manager: [here](https://github.com/tmux-plugins/tpm)
+  - List Plugin: [dracula](https://draculatheme.com/tmux)
+  - List Plugin:
+    - [dracula](https://draculatheme.com/tmux)
 
 - Plugins:
 
   - Tmux Plugin Manager: [here](https://github.com/tmux-plugins/tpm)
   - List Plugin:
     - [dracula](https://draculatheme.com/tmux)
->>>>>>> main
 
 - Key Bindings
   - **Prefix Key:** `Ctrl + f`
@@ -52,4 +51,4 @@
   - `Ctrl + a` : Select all
   - `Ctrl + q` : Exit file
   - `Ctrl + s` : Save file
-  - `Ctrl + /` : Comment current line:
+  - `Ctrl + /` : Comment current line

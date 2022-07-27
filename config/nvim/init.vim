@@ -4,29 +4,24 @@ endfor
 runtime ./maps.vim
 
 call plug#begin('~/.config/nvim/bundle')
-Plug 'tanvirtin/monokai.nvim' "Theme
-Plug 'adrian5/oceanic-next-vim'
+Plug 'navarasu/onedark.nvim'  " Themes
 
-"airline(bottom taskbar)
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"lualine(bottom taskbar)
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
 
 "Support for Code
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'} "hightlight syntax
 Plug 'windwp/nvim-autopairs'    " auto close bracket
-Plug 'voldikss/vim-floaterm'    "terminal 
+Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.*'} "Terminal 
 Plug 'mhartington/formatter.nvim' "Format Code
 Plug 'lukas-reineke/indent-blankline.nvim' "bracket hightlight
-Plug 'preservim/nerdcommenter'  "fast comment
+Plug 'numToStr/Comment.nvim'   " Comment 
 Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' } " File explore
 Plug 'lewis6991/gitsigns.nvim'  " Support Git
-
+Plug 'kyazdani42/nvim-tree.lua' " Sidebar file explore
 "Auto suggest Code
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"File Manager
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 
@@ -38,10 +33,10 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 set number
 set title
-set tabstop=4
 set background=dark
 set softtabstop=4
 set shiftwidth=4
+set tabstop=4
 set smarttab
 set cursorline
 set expandtab
@@ -60,8 +55,3 @@ set spelllang=en
 syntax enable
 filetype plugin on
 set termguicolors
-let g:oceanic_gutter_like_bg=1
-let g:oceanic_bold=1
-let g:oceanic_italic_comments=1
-colorscheme oceanicnext
-

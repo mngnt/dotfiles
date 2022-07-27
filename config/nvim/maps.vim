@@ -11,6 +11,10 @@
 "*****************************************************************************
 " Change key leader to Space
 let mapleader = " "
+" Delete without yank
+nnoremap <leader>d "_d
+nnoremap x "_x
+
 " EXIT vim
 nnoremap <silent><C-q> :q!<cr>
 " Fast save

@@ -28,9 +28,9 @@ alias st-disable="sudo systemctl disable"
 
 
 # Alias vim
-alias evp="nvim ~/.config/nvim/configs/01.plugins.vim"
-alias evc="nvim ~/.config/nvim/configs/02.configs.vim"
-alias nv="nvim"
+alias evp="nvim ~/.config/nvim/init.vim"
+alias evm="nvim ~/.config/nvim/maps.vim"
+alias v="nvim"
 
 # Alias arch
 alias pacin="sudo pacman -S"

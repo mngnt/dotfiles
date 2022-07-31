@@ -43,7 +43,7 @@ install_package() {
 }
 
 copy_files() {
-  sudo cp -r .config/* ~/.config/
+  sudo cp -r config/* ~/.config/
   sudo mkdir -p /usr/share/fonts
   sudo cp -r fonts /usr/share/fonts
   cp -r zsh/.zshrc ~/

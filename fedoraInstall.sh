@@ -44,14 +44,16 @@ install_package() {
   sudo dnf install google-chrome-stable nmap npm nodejs zsh alacritty flameshot -y
 }
 
-gnome_setting() {
-  gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
+copy_files() {
+  sudo cp -r config/* ~/.config/
+  sudo mkdir -p /usr/share/fonts
+  sudo cp -r fonts /usr/share/fonts
+  cp -r zsh/.zshrc ~/
+  gnome_setting
 }
 
-copy_files() {
-  cp -r alacritty nvim tmux ibus-bamboo ~/.config
-  mkdir -p /usr/share/fonts
-  cp -r fonts /usr/share/fonts
+gnome_setting() {
+  gsettings set org.gnome.desktop.wm.preferences button-layout ':minimize,maximize,close'
 }
 
 remove_package() {
@@ -67,7 +69,6 @@ npm_install() {
 
 run() {
   frist
-  gnome_setting
   copy_files
   remove_package
   npm_install

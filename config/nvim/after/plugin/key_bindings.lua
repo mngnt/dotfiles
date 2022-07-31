@@ -1,13 +1,28 @@
+local map = vim.api.nvim_set_keymap
+local after = { noremap = true, silent = true }
 -- set 'Space' key as leader key
 vim.g.mapleader = " "
 
 -- select all
-vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = true, silent = true })
+map("n", "<C-a>", "ggVG", after)
 
--- Exit Vim
-vim.api.nvim_set_keymap("n", "<C-q>", ":q!<CR>", { noremap = true, silent = true })
+-- Exit
+map("n", "<C-q>", ":q!<CR>", after)
 
 -- save file
-vim.api.nvim_set_keymap("n", "<C-s>", ":update<CR>", { noremap = true, silent = true })
+map("n", "<C-s>", ":update<CR>", after)
 
---  Increment/decrement
+--- Next/Prev Buffer
+map("n", "bn", ":bnext<CR>", after)
+map("n", "bp", ":bprevious<CR>", after)
+-- Create Buffer
+map("n", "bN", ":enew<CR>", after)
+-- Delete Buffer
+map("n", "bd", ":bd<CR>", after)
+
+-- Run Js
+map("n", "<F5>", ":w !node %<cr>", after)
+
+-- Increment/decrement
+map("n", "+", "<C-a>", after)
+map("n", "-", "<C-x>", after)
